@@ -9,16 +9,15 @@ html{
     scroll-behavior: smooth;
 }
 
-body {
+body{
     margin: 0%;
-    padding: 0%;
     width: 100vw;
     background: var(--bg-colour);
     max-width: 100vw;
     overflow-x: hidden;
     align-items: center;
     font-family: "Poppins", sans-serif;
-    display: inline-block;
+    display: flexbox;  
 }
 
 #top{
@@ -48,33 +47,25 @@ body {
     position: relative;
 }
 
-.selection{
-    top: 0;
-    width: 100vw;
-    padding: 0px;
+nav{
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
     font-size: 4vw;
     background-color: var(--head-colour);
-    text-decoration: none;
-    justify-content: center;
-    text-align: center;
-    float: center;
-    opacity: 1;
 }
 
-#home-button{
-    float: left;
-    opacity: 0;
-}
-
-#navbar nav a{
+nav a{
     top: 0;
-    margin-top: 0;
+    margin: 0px 20px;
     padding: 0px;
-    font-size: 4vw;
+    font-size: 30px;
     color: #808080;
     transition: 0.5s;
     text-decoration: none;
-    float: center;
 }
 
 #navbar nav a:hover, 
@@ -83,18 +74,18 @@ body {
     color:white;
     transition: 0.5s;
     animation-timing-function: ease-out;
+    opacity: 1;
 }
 
 .sticky{
     background: var(--head-colour);
     position: fixed;
-    top: 0px;
+    top: 0;
     justify-content: center;
     width: 100vw;
     animation-duration:0.5s;
-    opacity: 1;
+    transform: opacity 1;
 }
-
 
 .button{
     margin: 1rem;
@@ -112,10 +103,18 @@ body {
 }
 
 section{
-    margin-top: 40vh;
-    min-height: 60vh;
+    padding: 40px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: top;
     color: white
+}
+
+article{
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 30px;
+    margin: 0px auto;
 }
