@@ -32,24 +32,25 @@ insta.addEventListener('click', () => {
 
 
 //navbar js
-let sections = document.querySelectorAll("section");
-let menu = document.querySelectorAll("#navbar nav a");
+let section = document.querySelectorAll('section');
+let menu = document.querySelectorAll('#navbar nav a');
 
 window.onscroll = () =>{
-    sections.forEach((i =>{
+    section.forEach((i) =>{
+        console.log(menu)
+        console.log(section)
         let id  = i.getAttribute('id');
         let top = window.scrollY;
         let offset = i.offsetTop - 150;
         let height = i.offsetHeight;
-        console.log(menu)
         if (top >= offset && top < offset + height) {
             menu.forEach((link) => {
                 link.classList.remove('active');
                 document.querySelector("nav a[href*=" + id + "]").classList.add("active");            });
         }
-    }));
+    });
     stickynavbar()
-};                      
+};                  
 
 var navbar = document.getElementById('navbar');
 var sticky = navbar.offsetTop;

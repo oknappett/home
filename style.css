@@ -32,13 +32,6 @@ body{
     justify-content: center;
 }
 
-#name{
-    text-decoration: none;
-    color:white;
-    text-decoration: none;
-    position: relative;
-}
-
 #socials{
     display: flex;
     justify-content: center;
@@ -47,8 +40,13 @@ body{
     position: relative;
 }
 
+.intro{
+    font-size: 20px;
+    text-align: center;
+    max-width: 90vw;
+}
+
 nav{
-    padding: 10px;
     text-align: center;
     justify-content: center;
     width: 100%;
@@ -69,22 +67,23 @@ nav a{
 }
 
 #navbar nav a:hover, 
-#navbar nav a active{
+#navbar .active{
     text-decoration: none;
     color:white;
     transition: 0.5s;
     animation-timing-function: ease-out;
-    opacity: 1;
+    letter-spacing: 1px;
+    transform: scale(1.2)
 }
 
 .sticky{
     background: var(--head-colour);
     position: fixed;
-    top: 0;
+    top:0;
+    padding-bottom: 0px;
     justify-content: center;
     width: 100vw;
     animation-duration:0.5s;
-    transform: opacity 1;
 }
 
 .button{
@@ -103,10 +102,9 @@ nav a{
 }
 
 section{
-    padding: 40px;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: top;
     align-items: top;
     color: white
 }
@@ -115,6 +113,5 @@ article{
     width: 90%;
     max-width: 600px;
     text-align: center;
-    padding: 30px;
-    margin: 0px auto;
+    margin: auto;
 }
