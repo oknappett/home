@@ -50,15 +50,14 @@ nav{
     text-align: center;
     justify-content: center;
     width: 100%;
-    position: sticky;
     top: 0px;
-    font-size: 4vw;
+    font-size: 40px;
     background-color: var(--head-colour);
 }
 
 nav a{
     top: 0;
-    margin: 0px 20px;
+    margin: 20px 20px;
     padding: 0px;
     font-size: 30px;
     color: #808080;
@@ -73,7 +72,7 @@ nav a{
     transition: 0.5s;
     animation-timing-function: ease-out;
     letter-spacing: 1px;
-    transform: scale(1.2)
+    transform: scale(1.2);
 }
 
 .sticky{
@@ -82,6 +81,7 @@ nav a{
     top:0;
     padding-bottom: 0px;
     justify-content: center;
+    height: 60px;
     width: 100vw;
     animation-duration:0.5s;
 }
@@ -104,14 +104,18 @@ nav a{
 section{
     min-height: 100vh;
     display: flex;
-    justify-content: top;
+    justify-content: center;
     align-items: top;
-    color: white
+    color: white;
+}
+
+section:not(#experience){
+    padding-top: 70px;
 }
 
 article{
+    top: 100px;
     width: 90%;
     max-width: 600px;
     text-align: center;
-    margin: auto;
 }
