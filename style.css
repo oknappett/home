@@ -3,6 +3,8 @@
 :root{
     --head-colour:#282C34;
     --bg-colour: #21252B;
+    --navbar-height: 10vh;
+    --num-of-links: 4;
 }
 
 html{
@@ -24,7 +26,7 @@ body{
     text-align: center;
     top: 0;
     width: 100vw;
-    font-size: 6vw;
+    font-size: 8vw;
     color: white;
     background: var(--head-colour);
     display: inline-block;
@@ -40,33 +42,40 @@ body{
     position: relative;
 }
 
-.intro{
+.intro p{
     font-size: 20px;
     text-align: center;
-    max-width: 90vw;
-}
-
-nav{
-    text-align: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
     justify-content: center;
-    width: 100%;
-    top: 0px;
-    font-size: 40px;
-    background-color: var(--head-colour);
+    text-align: center;
 }
 
-nav a{
+.selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--navbar-height);
+    top: 0px;
+    background-color: var(--head-colour);
+    position: sticky;
+    z-index: 1;
+}
+  
+.selection a {
     top: 0;
     margin: 20px 20px;
     padding: 0px;
-    font-size: 30px;
     color: #808080;
     transition: 0.5s;
     text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
 }
 
-#navbar nav a:hover, 
-#navbar .active{
+.selection nav a:hover, 
+.selection .active{
     text-decoration: none;
     color:white;
     transition: 0.5s;
@@ -75,13 +84,18 @@ nav a{
     transform: scale(1.2);
 }
 
+.profile-picture{
+    width: 75%;
+
+}
+
 .sticky{
     background: var(--head-colour);
     position: fixed;
     top:0;
     padding-bottom: 0px;
     justify-content: center;
-    height: 60px;
+    height: var(--navbar-height);
     width: 100vw;
     animation-duration:0.5s;
 }
@@ -102,11 +116,24 @@ nav a{
 }
 
 section{
-    min-height: 100vh;
-    display: flex;
+    min-height: calc(100vh - var(--navbar-height));
+    width: 100vw;
     justify-content: center;
     align-items: top;
     color: white;
+    display: inline-block;
+    text-align: center;
+    padding-top: var(--navbar-height);
+}
+
+section:not(#about){
+    min-height: calc(100vh - var(--navbar-height));
+    width: 100vw;
+    justify-content: center;
+    align-items: top;
+    color: white;
+    display: inline-block;
+    text-align: center;
 }
 
 section:not(#experience){
@@ -116,6 +143,7 @@ section:not(#experience){
 article{
     top: 100px;
     width: 90%;
-    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }

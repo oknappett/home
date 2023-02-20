@@ -30,6 +30,10 @@ insta.addEventListener('click', () => {
     window.open(igLink, '_blank').focus()
 })
 
+const navLinks = document.querySelectorAll('selection a');
+const numOfLinks = navLinks.length;
+document.documentElement.style.setProperty('--num-of-links', numOfLinks);
+
 
 //navbar js
 let section = document.querySelectorAll('section');
