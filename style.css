@@ -42,6 +42,54 @@ body{
     position: relative;
 }
 
+img{
+    border-radius: 50%;
+}
+
+.timeline-description{
+    max-width: 80%;
+    margin:auto;
+    color: #989bbe;
+}
+
+.intro{
+    display:table;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    color: #989bbe;
+}
+
+
+a:link {
+    color: orange;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+a:visited {
+color: orange;
+background-color: transparent;
+text-decoration: none;
+}
+
+a:hover {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+
+a:active {
+color: yellow;
+background-color: transparent;
+text-decoration: underline;
+}
+
+.head-intro{
+    font-size: 20px;
+    text-align: center;
+}
+
 .intro p{
     font-size: 20px;
     text-align: center;
@@ -49,6 +97,7 @@ body{
     padding-right: 10vw;
     justify-content: center;
     text-align: center;
+    float: left;
 }
 
 .selection {
@@ -56,6 +105,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    font-size: 4vh;
     height: var(--navbar-height);
     top: 0px;
     background-color: var(--head-colour);
@@ -67,7 +117,7 @@ body{
     top: 0;
     margin: 20px 20px;
     padding: 0px;
-    color: #808080;
+    color: rgba(255, 255, 255, 0.2);
     transition: 0.5s;
     text-decoration: none;
     flex-grow: 1;
@@ -85,8 +135,7 @@ body{
 }
 
 .profile-picture{
-    width: 75%;
-
+    max-height: 40vh;
 }
 
 .sticky{
@@ -116,7 +165,6 @@ body{
 }
 
 section{
-    min-height: calc(100vh - var(--navbar-height));
     width: 100vw;
     justify-content: center;
     align-items: top;
@@ -127,7 +175,6 @@ section{
 }
 
 section:not(#about){
-    min-height: calc(100vh - var(--navbar-height));
     width: 100vw;
     justify-content: center;
     align-items: top;
